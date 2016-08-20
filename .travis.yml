@@ -15,9 +15,9 @@ matrix:
       env: DIST="precise"
       cache: apt
 
-#before_install:
-# - if [[ "$DIST" == "trusty" ]]; then sudo apt-get update -qq ; sudo apt-get install -qq  ; fi
-# - if [[ "$DIST" == "precise" ]]; then sudo apt-get update -qq ; sudo apt-get install -qq ; fi
+before_install:
+ - if [[ "$DIST" == "trusty" ]]; then sudo apt-get update -qq ; sudo apt-get install -qq mesa-utils ; fi
+ - if [[ "$DIST" == "precise" ]]; then sudo apt-get update -qq ; sudo apt-get install -qq mesa-utils ; fi
 
 branches:
   only:
