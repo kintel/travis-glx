@@ -9,6 +9,8 @@ ldd /usr/bin/glxinfo
 glxinfo -display `cat virtualfb.DISPLAY`
 ./virtualfb.sh
 
+ls -l /var/log
+
 if [[ $? != 0 ]]; then
   echo "Test failure"
   exit 1
