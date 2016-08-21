@@ -2,6 +2,9 @@
 
 set -x
 
+ldd /usr/bin/Xvfb
+ldd /usr/bin/glxinfo
+
 ./virtualfb.sh
 glxinfo -display `cat virtualfb.DISPLAY`
 ./virtualfb.sh
