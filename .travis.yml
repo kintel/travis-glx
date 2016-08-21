@@ -16,7 +16,7 @@ matrix:
       cache: apt
 
 before_install:
- - if [[ "$DIST" == "trusty" ]]; then sudo apt-get update -qq ; sudo apt-get install -qq --install-recommends mesa-utils libgl1-mesa-dev libgl1-mesa-glx ; fi
+ - if [[ "$DIST" == "trusty" ]]; then sudo apt-get update -qq ; sudo apt-get install -qq --install-recommends mesa-utils libgl1-mesa-dev libgl1-mesa-glx ; sudo apt-get remove -qq fflrx fglrx-dev ; fi
  - if [[ "$DIST" == "precise" ]]; then sudo apt-get update -qq ; sudo apt-get install -qq --install-recommends mesa-utils libgl1-mesa-dev-lts-trusty ; fi
 
 branches:
