@@ -16,8 +16,8 @@ matrix:
       cache: apt
 
 before_install:
- - if [[ "$DIST" == "trusty" ]]; then sudo apt-get update -qq ; sudo apt-get purge -qq fglrx ; fi
- - if [[ "$DIST" == "precise" ]]; then sudo apt-get update -qq ; sudo apt-get purge -qq fglrx ; fi
+ - if [[ "$DIST" == "trusty" ]]; then sudo apt-get update -qq ; sudo apt-get purge -qq fglrx sudo apt-get install -qq --install-recommends mesa-utils ; fi
+ - if [[ "$DIST" == "precise" ]]; then sudo apt-get update -qq ; sudo apt-get purge -qq fglrx ; sudo apt-get install -qq --install-recommends mesa-utils ; fi
 
 branches:
   only:
